@@ -22,6 +22,11 @@ def is_settings_in_directory():
     return os.path.exists(file_settings)
 
 
+# Функция, которая проигрывает музыку
+def play_sound(name_music):
+    playsound(get_path() + '\\' + name_music)
+
+
 # Функция для подключения к уроку
 def connection_to_lessons(settings):
     day_of_week = get_day()
@@ -34,7 +39,7 @@ def connection_to_lessons(settings):
             link_to_lessons = settings['ссылка_на_уроки']['Иначе']
         webbrowser.open_new_tab(link_to_lessons)
         if link_to_lessons == settings['ссылка_на_уроки']['Иначе']:
-            playsound('C:/Developer/Python/p3/dj_arbuz.mp3')
+            playsound('dj_arbuz.mp3')
     wait_until_next_lesson_start(settings)
 
 

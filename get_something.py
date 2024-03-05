@@ -9,6 +9,10 @@ def get_day():
     return calendar.day_name[datetime.datetime.now().weekday()]
 
 
+def get_path():
+    return os.path.dirname(os.path.realpath(__file__))
+
+
 # Функция для получения абсолютного пути к файлу настроек
 def get_path_settings():
     filename = "settings.json"
